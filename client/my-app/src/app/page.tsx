@@ -1,9 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import Navbar from "./components/navbar";
+
 import Footer from "./components/footer";
 import Chatbot from "./components/Chatbot";
+import Navbar from "./components/navbar";
 
 export default function Home() {
   const [chatStarted, setChatStarted] = useState(false);
@@ -14,7 +15,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center" style={{ backgroundImage: 'url(/path/to/your/image.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      <Navbar />
+    <Navbar/>
       {!chatStarted && (
         <div className="flex flex-col items-center justify-center h-full">
           <h1 className="text-5xl font-extrabold mb-4 text-center">Welcome to HealthCare Chat</h1>
