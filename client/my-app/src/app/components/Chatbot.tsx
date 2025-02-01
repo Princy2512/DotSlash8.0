@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 import { FaPaperPlane } from 'react-icons/fa';
-
+import { FaMicrophone } from "react-icons/fa";
+import { BsFillFileEarmarkPdfFill } from "react-icons/bs";
 const Chatbot = () => {
   const [messages, setMessages] = useState<{ text: string, sender: 'user' | 'bot' }[]>([]);
   const [input, setInput] = useState('');
@@ -29,21 +30,27 @@ const Chatbot = () => {
           </div>
         ))}
       </div>
-      <div className="flex">
-        <input
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          className="flex-grow p-2 rounded-l bg-gray-700 border border-gray-600 text-white"
-          placeholder="Type your message..."
-        />
-        <button
-          onClick={handleSendMessage}
-          className="bg-blue-500 p-2 rounded-r text-white flex items-center justify-center"
-        >
-          <FaPaperPlane />
-        </button>
-      </div>
+      <div className="flex items-center p-4 bg-gray-800 rounded-lg shadow-lg">
+  <button className='p-3 bg-gray-900 text-white rounded-full hover:bg-blue-700 transition duration-300 ease-in-out'>
+    <FaMicrophone />
+  </button>
+  <button className='p-3 bg-gray-900 text-white rounded-full hover:bg-blue-700 transition duration-300 ease-in-out ml-2'>
+    <BsFillFileEarmarkPdfFill />
+  </button>
+  <input
+    type="text"
+    value={input}
+    onChange={(e) => setInput(e.target.value)}
+    className="flex-grow p-3 mx-2 rounded bg-gray-700 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+    placeholder="Type your message..."
+  />
+  <button
+    onClick={handleSendMessage}
+    className="bg-blue-500 p-3 rounded text-white flex items-center justify-center hover:bg-blue-700 transition duration-300 ease-in-out"
+  >
+    <FaPaperPlane />
+  </button>
+</div>
     </div>
   );
 };

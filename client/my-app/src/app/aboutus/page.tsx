@@ -1,10 +1,11 @@
 import React from 'react';
 import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 
 const AboutUs = () => {
   return (
     <div className="min-h-screen bg-gray-800 flex flex-col items-center justify-center px-4 text-white">
-      
+      <Navbar />
       <h1 className="text-4xl font-bold mb-6 text-center">About Us</h1>
       <p className="text-lg mb-4 text-center max-w-2xl">
         Welcome to <span className="font-semibold">HealthChat</span>! We are committed to providing the best health-related information and services.
@@ -22,6 +23,7 @@ const AboutUs = () => {
       <p className="text-lg mt-6 text-center max-w-2xl">
         Your health is our top priority. Thank you for choosing <span className="font-semibold">HealthChat</span> as your trusted health companion.
       </p>
+      <Footer/>
     </div>
   );
 }
