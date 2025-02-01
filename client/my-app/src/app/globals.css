@@ -7,6 +7,10 @@
   --foreground: #171717;
 }
 
+body {
+  @apply bg-gray-100 font-sans;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
