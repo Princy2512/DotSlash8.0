@@ -1,11 +1,11 @@
-import React from "react"
+import React from "react";
 import { FaLinkedin, FaYoutube, FaInstagram, FaTwitter, FaFacebook } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 p-4 shadow-lg w-full fixed bottom-0 left-0">
+    <footer className="bg-gray-900 p-4 shadow-lg w-full fixed bottom-0 left-0 z-10">
       <div className="flex justify-between items-center px-8">
-        <span className='text-gray-300'>© 2023 iTask. All rights reserved.</span>
+        <span className='text-gray-300'>© 2023 HealthChat. All rights reserved.</span>
         <ul className="flex gap-8">
           <li className='cursor-pointer hover:font-bold transition-all text-gray-300 hover:text-yellow-500'>Privacy Policy</li>
           <li className='cursor-pointer hover:font-bold transition-all text-gray-300 hover:text-yellow-500'>Terms of Service</li>
@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
